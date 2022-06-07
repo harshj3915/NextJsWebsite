@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
 
+import styles from "../styles/Landing.module.css";
+
 export default function Home() {
   return (
     <div
@@ -8,9 +10,9 @@ export default function Home() {
       data-layout="fluid"
       data-sidebar-position="left"
       data-sidebar-behavior="sticky"
-      className="global-style"
+      className={styles.globalStyle}
     >
-      <div className="google-play-image">
+      <div className={styles.googlePlayImage}>
         <a href="https://play.google.com/store/apps/details?id=com.vinnovateit.studyhub">
           <Image
             id="gplaybadge"
@@ -21,27 +23,27 @@ export default function Home() {
           />
         </a>
       </div>
-      <div className="wrapper">
-        <div className="main">
-          <header className="header">
-            <div className="content">
-              <h1 className="h1">
+      <div className={styles.wrapper}>
+        <div className={styles.main}>
+          <header className={styles.header}>
+            <div className={styles.content}>
+              <h1 className={styles.h1}>
                 StudyHub by
-                <span className="viit"></span> VinnovateIT
+                <span className={styles.viit}></span> VinnovateIT
               </h1>
-              <p className="revcolor landingp">
-                <span className="quotes"> {'"'} </span>
+              <p className={`${styles.revcolor} ${styles.landingp}`}>
+                <span className={styles.quotes}> {'"'} </span>
                 {
                   "A 'CAT'ing chai and StudyHub from VinnovateIT is all you need for your exams!!"
                 }
-                <span className="quotes-2">{' "'} </span>
+                <span className={styles.quotes - 2}>{' "'} </span>
               </p>
-              <h4 className="desc">
+              <h4 className={styles.desc}>
                 No need to worry about your exams anymore, we present to you the
                 StudyHub. All in one resource collection for VIT
               </h4>
 
-              <div className="buttons">
+              <div className={styles.buttons}>
                 <a href="branch/firstsem">1st Sem</a>
                 <a href="branch/it">IT</a>
                 <a href="branch/cse">CSE</a>
@@ -51,7 +53,7 @@ export default function Home() {
                 <a href="branch/uc">U.C.</a>
               </div>
             </div>
-            <div className="imgBox">
+            <div className={styles.imgBox}>
               <Image
                 src="/images/studyguide.svg"
                 height="400px"

@@ -19,7 +19,7 @@
     }
 }
 
-.global-style {
+.globalStyle {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -393,7 +393,7 @@ p.landingp {
     }
 }
 
-.google-play-image {
+.googlePlayImage {
     z-index: 9999;
     position: fixed;
     bottom: 75px;
