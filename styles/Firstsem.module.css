@@ -1,0 +1,36 @@
+.coursecard {
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+    transition: 0.08s;
+    cursor: pointer;
+}
+
+/* .coursecard:hover
+    {
+        animation: 1s;
+        transition: 1s;
+        box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5) inset;
+        -webkit-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5) inset;
+        -moz-box-shadow: 0px 0px 4px 1px rgba(0,0,0,0.5) inset;
+    } */
+.coursecard:hover {
+    box-shadow: 0 0 0 0;
+    transition: 0.08s;
+}
+
+.h1 {
+    background: #6c757d;
+    background: -webkit-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+    background: -moz-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+    background: linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    font-size: 220%;
+}
+
+.doodle {
+    position: fixed;
+    z-index: -999;
+}
