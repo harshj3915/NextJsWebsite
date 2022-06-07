@@ -1,4 +1,4 @@
-#gplaybadge {
+#googlePlayImage {
     animation: textgrowth 1s infinite alternate;
 }
 
@@ -68,14 +68,14 @@
     box-sizing: border-box;
 }
 
-.content h2 {
+.contentH2 {
     color: rgb(76, 78, 80);
     font-size: 1.5em;
     font-weight: 800;
     text-transform: uppercase;
 }
 
-.content p {
+.contentP {
     color: black;
     font-size: 1.1em;
 }
@@ -129,14 +129,14 @@
         margin: 20px;
     }
 
-    .content h2 {
+    .contentH2 {
         color: black;
         font-size: 1.2rem;
         font-weight: 800;
         text-transform: uppercase;
     }
 
-    .content p {
+    .contentP {
         color: black;
         font-size: 1em;
     }
@@ -218,14 +218,14 @@
         margin: 20px;
     }
 
-    .content h2 {
+    .contentH2 {
         color: black;
         font-size: 1.2rem;
         font-weight: 800;
         text-transform: uppercase;
     }
 
-    .content p {
+    .contentP {
         color: black;
         font-size: 1em;
     }

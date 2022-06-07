@@ -1,0 +1,49 @@
+.logo {
+    padding: 0;
+    margin: 0;
+    margin-top: 0%;
+    vertical-align: top
+}
+
+@media only screen and (max-width :500px) {
+    .logo {
+        height: 40px;
+        width: 63px;
+    }
+}
+
+@media only screen and (max-width :380px) {
+    .logo {
+        height: 35px;
+        width: 50px;
+    }
+}
+
+.sidebarToggle {
+    margin-right: 3rem;
+    margin-top: 0%;
+    font-size: large;
+}
+
+.searchButton button {
+    background: rgb(76, 78, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.8rem;
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+    color: #fff;
+}
+
+.searchForm {
+    padding-right: 0%;
+    margin-right: 0%;
+    text-align: end;
+}
+
+.searchNavbar {
+    width: 200px;
+}
