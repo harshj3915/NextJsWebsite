@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 import styles from "../styles/Landing.module.css";
 
@@ -70,6 +71,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

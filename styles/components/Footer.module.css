@@ -1,0 +1,35 @@
+.footer {
+    padding: 0
+}
+
+.footlinksViit {
+    margin-bottom: 1rem;
+}
+
+.footerSpan {
+    font-size: 14px
+}
+
+
+.lnks {
+    margin-top: 0.625rem;
+    padding-left: 0.25rem;
+}
+
+@media screen and (max-width: 450px) {
+    .lnks {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.cpr {
+    margin-top: 0.625rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 5rem;
+}
+
+.textMuted {
+    color: #737d85 !important;
+}
