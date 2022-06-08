@@ -38,4 +38,7 @@ const CourseSchema = new mongoose.Schema({
   ],
 });
 
-module.exports = mongoose.model("courses", CourseSchema);
+const Course =
+  mongoose.models.branch || mongoose.model("courses", CourseSchema);
+
+export default Course;
