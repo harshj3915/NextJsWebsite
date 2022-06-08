@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
+import mongoose from "mongoose";
 
 import { useEffect, useState } from "react";
 
@@ -108,3 +109,24 @@ const FirstSem = () => {
 };
 
 export default FirstSem;
+
+export async function getServerSideProps() {
+  try {
+    if (mongoose.connections[0].readyState) {
+      //Execute fetch here
+    }
+
+    await mongoose
+      .connect(process.env.MONGODB_URI, {
+        //@ts-ignore
+        useUnifiedTopology: true,
+        useNewUrlParser: true,
+      })
+      .then(() => {
+        console.log("Connected to DB!");
+        //Execute fetch here
+      });
+  } catch (e) {
+    console.log("Error in connecting to DB!", e.message);
+  }
+}
