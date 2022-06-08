@@ -3,19 +3,12 @@ import Footer from "../../components/footer";
 import mongoose from "mongoose";
 
 import { useEffect, useState } from "react";
-
-import connectDB from "../../database/connectDB";
 import Course from "../../database/models/Course";
 
 const FirstSem = () => {
   const subjects = [];
 
   const [errors, setErrors] = useState("");
-
-  useEffect(() => {
-    connectDB();
-    fetchSubjectData();
-  });
 
   const fetchSubjectData = async () => {
     const calculus = await Course.findOne({ code: "MAT1011" });
@@ -118,7 +111,6 @@ export async function getServerSideProps() {
 
     await mongoose
       .connect(process.env.MONGODB_URI, {
-        //@ts-ignore
         useUnifiedTopology: true,
         useNewUrlParser: true,
       })
