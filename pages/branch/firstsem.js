@@ -1,8 +1,9 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
+import connectDB from "../../database/connectDB";
 import Course from "../../database/models/Course";
 
 const FirstSem = () => {
@@ -11,6 +12,7 @@ const FirstSem = () => {
   const [errors, setErrors] = useState("");
 
   useEffect(() => {
+    connectDB();
     fetchSubjectData();
   });
 

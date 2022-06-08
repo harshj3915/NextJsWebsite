@@ -5,8 +5,13 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 import styles from "../styles/Landing.module.css";
+import { useEffect } from "react";
+import connectDB from "../database/connectDB";
 
 export default function Home() {
+  useEffect(() => {
+    connectDB();
+  }, []);
   return (
     <>
       <Navbar />
