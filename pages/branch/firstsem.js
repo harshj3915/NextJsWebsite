@@ -107,17 +107,17 @@ export async function getServerSideProps() {
   try {
     if (mongoose.connections[0].readyState) {
       //Execute fetch here
+    } else {
+      await mongoose
+        .connect(process.env.MONGODB_URI, {
+          useUnifiedTopology: true,
+          useNewUrlParser: true,
+        })
+        .then(() => {
+          console.log("Connected to DB!");
+          //Execute fetch here
+        });
     }
-
-    await mongoose
-      .connect(process.env.MONGODB_URI, {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-      })
-      .then(() => {
-        console.log("Connected to DB!");
-        //Execute fetch here
-      });
   } catch (e) {
     console.log("Error in connecting to DB!", e.message);
   }
