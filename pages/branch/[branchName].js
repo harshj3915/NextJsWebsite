@@ -4,7 +4,6 @@ import mongoose from "mongoose";
 
 import styles from "../../styles/Cousepages.module.css";
 
-import Course from "../../database/models/Course";
 import Branch from "../../database/models/Branch";
 import { useRouter } from "next/router";
 

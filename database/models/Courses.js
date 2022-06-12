@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const CourseSchema = new mongoose.Schema({
+const CoursesSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -37,8 +37,8 @@ const CourseSchema = new mongoose.Schema({
     },
   ],
 });
-console.log(mongoose.model);
-const Course =
-  mongoose.model("courses") || mongoose.model("courses", CourseSchema);
 
-export default Course;
+const Courses =
+  mongoose.model("courses") || mongoose.model("courses", CoursesSchema);
+
+export default Courses;
