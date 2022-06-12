@@ -5,13 +5,9 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 
 import styles from "../styles/Landing.module.css";
-import { useEffect } from "react";
-import connectDB from "../database/connectDB";
+import mongoose from "mongoose";
 
-export default function Home() {
-  useEffect(() => {
-    connectDB();
-  }, []);
+export default function Home(props) {
   return (
     <>
       <Navbar />
@@ -79,4 +75,31 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  try {
+    if (mongoose.connections[0].readyState) {
+      //Execute fetch here
+    } else {
+      console.log(process.env.MONGO_URI);
+      await mongoose
+        .connect(process.env.MONGO_URI, {
+          useUnifiedTopology: true,
+          useNewUrlParser: true,
+        })
+        .then(() => {
+          console.log("Connected to DB!");
+          //Execute fetch here
+        });
+    }
+    return {
+      props: {},
+    };
+  } catch (e) {
+    console.log("Error in connecting to DB!", e.message);
+    return {
+      props: {},
+    };
+  }
 }
