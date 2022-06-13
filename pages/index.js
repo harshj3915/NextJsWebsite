@@ -33,7 +33,7 @@ export default function Home(props) {
           </a>
         </div>
         <div className="wrapper">
-          <div className={styles.main}>
+          <div className="main">
             <header className={styles.header}>
               <div className={styles.content}>
                 <h1 className={styles.h1}>
