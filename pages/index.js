@@ -7,6 +7,9 @@ import Footer from "../components/footer";
 import styles from "../styles/Landing.module.css";
 import mongoose from "mongoose";
 
+import Branch from "../database/models/Branch";
+import Course from "../database/models/Courses";
+
 export default function Home(props) {
   return (
     <>
@@ -29,7 +32,7 @@ export default function Home(props) {
             />
           </a>
         </div>
-        <div className={styles.wrapper}>
+        <div className="wrapper">
           <div className={styles.main}>
             <header className={styles.header}>
               <div className={styles.content}>
