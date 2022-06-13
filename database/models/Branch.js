@@ -12,7 +12,6 @@ const BranchSchema = new mongoose.Schema({
   subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: "courses" }],
 });
 
-console.log(mongoose.models);
-const branch = mongoose.models.branch || mongoose.model("branch", BranchSchema);
+const branch = mongoose.model("branch", BranchSchema);
 
 export default branch;

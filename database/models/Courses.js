@@ -37,8 +37,7 @@ const CoursesSchema = new mongoose.Schema({
     },
   ],
 });
-console.log(mongoose.models);
-const courses =
-  mongoose.models.courses || mongoose.model("courses", CoursesSchema);
+
+const courses = mongoose.model("courses", CoursesSchema);
 
 export default courses;
