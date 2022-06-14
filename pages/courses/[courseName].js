@@ -52,6 +52,7 @@ const FirstSem = ({ Course, errors }) => {
                             <a href="https://vinnovateit.com/">
                               <Image
                                 height={80}
+                                width="auto"
                                 src="/img/VinnovateIT_small.png"
                                 alt="VinnovateIT"
                               />
@@ -75,15 +76,19 @@ const FirstSem = ({ Course, errors }) => {
                         <></>
                       )}
                       <div className="col-12 col-lg-12 col-xl-12">
-                        <h1 className="h3 mb-3" style="float: right">
+                        <h1 className={`h3 mb-3 ${styles.floatRight}`}>
                           Credits : {Course.credits}
                         </h1>
                       </div>
                     </div>
                     {Course.description && Course.description.sanitizedHtml ? (
-                      <div className="note" style="">
-                        <h1 style="display: inline">NOTE:</h1>
-                        <p>{Course.description.sanitizedHtml}</p>
+                      <div className="note">
+                        <h1 className={styles.noteH1}>NOTE:</h1>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: Course.description.sanitizedHtml,
+                          }}
+                        />
                       </div>
                     ) : (
                       <></>
@@ -101,8 +106,17 @@ const FirstSem = ({ Course, errors }) => {
                             </div>
                             <div className="accordion-body js-accordion-body">
                               <div className="accordion-body__contents my-container">
-                                <span> {module.sanitizedHtml} </span>
-                                <Image src="img/viitlogo.png" />
+                                <span
+                                  dangerouslySetInnerHTML={{
+                                    __html: module.sanitizedHtml,
+                                  }}
+                                />
+                                <Image
+                                  src="/img/viitlogo.png"
+                                  height={50}
+                                  width={20}
+                                  alt=""
+                                />
                               </div>
                             </div>
                             {/* end of accordion body  */}
