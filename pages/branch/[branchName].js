@@ -2,7 +2,7 @@ import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import mongoose from "mongoose";
 
-import styles from "../../styles/Cousepages.module.css";
+import styles from "../../styles/Branchpage.module.css";
 
 import Branch from "../../database/models/Branch";
 import { useRouter } from "next/router";
