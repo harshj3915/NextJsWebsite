@@ -38,6 +38,8 @@ const CoursesSchema = new mongoose.Schema({
   ],
 });
 
-const courses = mongoose.model("courses", CoursesSchema);
+const courses = mongoose.models
+  ? mongoose.models.courses
+  : mongoose.model("courses", CoursesSchema);
 
 export default courses;
