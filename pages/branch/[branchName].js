@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 
 import styles from "../../styles/Branchpage.module.css";
 
-import Branch from "../../database/models/Branch";
+import branch from "../../database/models/Branch";
 import { useRouter } from "next/router";
 
 const FirstSem = ({ subjects, errors }) => {
@@ -12,73 +12,75 @@ const FirstSem = ({ subjects, errors }) => {
   const { branchName } = router.query;
 
   return (
-    <div
-      data-theme="default"
-      data-layout="fluid"
-      data-sidebar-position="left"
-      data-sidebar-behavior="sticky"
-    >
+    <>
       <Navbar />
-      <div className="wrapper">
-        <div className="main">
-          <main className="content">
-            <div className="container-fluid p-0">
-              {errors ? (
-                <>
-                  <h1 className={`${styles.h1} mb-3 ${styles.textCenter}`}>
-                    {errors}
-                  </h1>
-                </>
-              ) : (
-                <>
-                  <h1 className={`${styles.h1} mb-3 ${styles.textCenter}`}>
-                    Branch - {branchName.toUpperCase()}
-                  </h1>
-                  <div className="row">
-                    {subjects.map((subject) => {
-                      return subject ? (
-                        <div
-                          className="col-12 col-md-6 col-lg-3"
-                          key={subject.code}
-                        >
+      <div
+        data-theme="default"
+        data-layout="fluid"
+        data-sidebar-position="left"
+        data-sidebar-behavior="sticky"
+      >
+        <div className="wrapper">
+          <div className="main">
+            <main className="content">
+              <div className="container-fluid p-0">
+                {errors ? (
+                  <>
+                    <h1 className={`${styles.h1} mb-3 ${styles.textCenter}`}>
+                      {errors}
+                    </h1>
+                  </>
+                ) : (
+                  <>
+                    <h1 className={`${styles.h1} mb-3 ${styles.textCenter}`}>
+                      Branch - {branchName.toUpperCase()}
+                    </h1>
+                    <div className="row">
+                      {subjects.map((subject) => {
+                        return subject ? (
                           <div
-                            className={`${styles.coursecard} card`}
-                            id="single-course"
+                            className="col-12 col-md-6 col-lg-3"
+                            key={subject.code}
                           >
-                            <div className="card-header px-4 pt-4">
-                              <div className="card-actions float-right">
-                                <div className="dropdown show"></div>
-                              </div>
-                              <h4 className="card-title mb-0">
-                                {subject.name}
-                              </h4>
-                            </div>
-                            <div className="card-body px-4 pt-2">
-                              <h6>Course Code - {subject.code}</h6>
-                              <h6>Credits - {subject.credits}</h6>
-                              <h6>Modules - {subject.modules.length}</h6>
-                            </div>
-                            <a
-                              href={`/courses/${subject._id}`}
-                              className={`btn ${styles.btnBtn}  btn-info`}
+                            <div
+                              className={`${styles.coursecard} card`}
+                              id="single-course"
                             >
-                              See Detailed Description
-                            </a>
+                              <div className="card-header px-4 pt-4">
+                                <div className="card-actions float-right">
+                                  <div className="dropdown show"></div>
+                                </div>
+                                <h4 className="card-title mb-0">
+                                  {subject.name}
+                                </h4>
+                              </div>
+                              <div className="card-body px-4 pt-2">
+                                <h6>Course Code - {subject.code}</h6>
+                                <h6>Credits - {subject.credits}</h6>
+                                <h6>Modules - {subject.modules.length}</h6>
+                              </div>
+                              <a
+                                href={`/courses/${subject._id}`}
+                                className={`btn ${styles.btnBtn}  btn-info`}
+                              >
+                                See Detailed Description
+                              </a>
+                            </div>
                           </div>
-                        </div>
-                      ) : (
-                        <></>
-                      );
-                    })}
-                  </div>
-                </>
-              )}
-            </div>
-          </main>
+                        ) : (
+                          <></>
+                        );
+                      })}
+                    </div>
+                  </>
+                )}
+              </div>
+            </main>
+          </div>
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 
@@ -104,13 +106,15 @@ export async function getServerSideProps(context) {
     let branchName = context.params.branchName;
     branchName = branchName.toUpperCase();
 
-    const branchData = await Branch.find({ name: branchName })
+    const branchData = await branch
+      .find({ name: branchName })
       .populate("subjects")
       .exec();
     const subjects = branchData[0].subjects;
     let errors = null;
     if (!subjects || subjects.length === 0) {
-      errors = "No subjects found";
+      console.log("Subject Error: No Subjects Found");
+      errors = "Internal Server Error! Please visit after sometime";
     }
     return {
       props: {
@@ -120,8 +124,12 @@ export async function getServerSideProps(context) {
     };
   } catch (e) {
     console.log("Error in connecting to DB!", e.message);
+    const errors = "Internal Server Error! Please visit after sometime";
     return {
-      props: {},
+      props: {
+        subjects: {},
+        errors: JSON.parse(JSON.stringify(errors)),
+      },
     };
   }
 }
