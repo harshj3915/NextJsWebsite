@@ -2,6 +2,7 @@
   "name": "studyhub-next",
   "version": "0.1.0",
   "private": true,
+  "author": "@tanmay000009",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
