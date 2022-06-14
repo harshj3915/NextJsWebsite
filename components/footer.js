@@ -6,7 +6,7 @@ import styles from "../styles/components/Footer.module.css";
 const Footer = () => {
   return (
     <>
-      <footer className={`${styles.footer} footer`}>
+      <footer className={`footer ${styles.footer}`}>
         <div className="container-fluid">
           <div className="row text-muted">
             <div className={styles.lnks}>
