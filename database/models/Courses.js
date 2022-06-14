@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const CoursesSchema = new mongoose.Schema({
   name: {
@@ -38,8 +38,5 @@ const CoursesSchema = new mongoose.Schema({
   ],
 });
 
-const courses = mongoose.models
-  ? mongoose.models.courses
-  : mongoose.model("courses", CoursesSchema);
-
-export default courses;
+module.exports =
+  mongoose.models.courses || mongoose.model("courses", CoursesSchema);

@@ -84,7 +84,7 @@ const FirstSem = ({ Course, errors }) => {
                     {Course.description && Course.description.sanitizedHtml ? (
                       <div className="note">
                         <h1 className={styles.noteH1}>NOTE:</h1>
-                        <p
+                        <div
                           dangerouslySetInnerHTML={{
                             __html: Course.description.sanitizedHtml,
                           }}

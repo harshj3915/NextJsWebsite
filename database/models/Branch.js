@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const BranchSchema = new mongoose.Schema({
   name: {
@@ -12,8 +12,7 @@ const BranchSchema = new mongoose.Schema({
   subjects: [{ type: mongoose.Schema.Types.ObjectId, ref: "courses" }],
 });
 
-const branch = mongoose.models
-  ? mongoose.models.branch
-  : mongoose.model("branch", BranchSchema);
+console.log(mongoose.models);
 
-export default branch;
+module.exports =
+  mongoose.models.branch || mongoose.model("branch", BranchSchema);
