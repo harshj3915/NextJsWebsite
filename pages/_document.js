@@ -16,6 +16,11 @@ export default function Document() {
             `,
           }}
         />
+
+        <Script
+          src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+          strategy="beforeInteractive"
+        ></Script>
       </Head>
 
       <body>
