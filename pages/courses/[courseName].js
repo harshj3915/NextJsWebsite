@@ -250,18 +250,31 @@ export async function getServerSideProps(context) {
     let errors = null;
 
     let courseName = context.params.courseName;
-    const courseData = await courses.findById(courseName);
+    if (
+      courseName.length > "603f82d34b48f40004358e53".length ||
+      courseName.length < "603f82d34b48f40004358e53".length
+    ) {
+      errors = "Course not found!";
 
-    if (!courseData || courseData.length === 0) {
-      errors = "Internal Server Error! Please visit after sometime";
+      return {
+        props: {
+          errors,
+        },
+      };
+    } else {
+      const courseData = await courses.findById(courseName);
+
+      if (!courseData || courseData.length === 0) {
+        errors = "Course not found!";
+      }
+
+      return {
+        props: {
+          Course: JSON.parse(JSON.stringify(courseData)),
+          errors: JSON.parse(JSON.stringify(errors)),
+        },
+      };
     }
-
-    return {
-      props: {
-        Course: JSON.parse(JSON.stringify(courseData)),
-        errors: JSON.parse(JSON.stringify(errors)),
-      },
-    };
   } catch (e) {
     console.log("Error in connecting to DB!", e.message);
     const errors = "Internal Server Error! Please visit after sometime";
