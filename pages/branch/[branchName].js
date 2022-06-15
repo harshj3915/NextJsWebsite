@@ -86,7 +86,21 @@ const FirstSem = ({ subjects, errors }) => {
 
 export default FirstSem;
 
-export async function getServerSideProps(context) {
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { branchName: "firstsem" } },
+      { params: { branchName: "it" } },
+      { params: { branchName: "cse" } },
+      { params: { branchName: "eee" } },
+      { params: { branchName: "mech" } },
+      { params: { branchName: "ece" } },
+      { params: { branchName: "uc" } },
+    ],
+    fallback: false,
+  };
+}
+export async function getStaticProps(context) {
   try {
     if (mongoose.connections[0].readyState) {
       //Execute fetch here
