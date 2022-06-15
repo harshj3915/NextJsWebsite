@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import styles from "../../styles/Branchpage.module.css";
 
 import branch from "../../database/models/Branch";
+import courses from "../../database/models/Courses";
 import { useRouter } from "next/router";
 
 const FirstSem = ({ subjects, errors }) => {

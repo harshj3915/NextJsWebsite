@@ -7,8 +7,8 @@ import Footer from "../components/footer";
 import styles from "../styles/Landing.module.css";
 import mongoose from "mongoose";
 
-import Branch from "../database/models/Branch";
-import Course from "../database/models/Courses";
+import branch from "../database/models/Branch";
+import courses from "../database/models/Courses";
 
 export default function Home(props) {
   return (
