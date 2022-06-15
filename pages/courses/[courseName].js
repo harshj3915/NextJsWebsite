@@ -22,7 +22,7 @@ const FirstSem = ({ Course, errors }) => {
         data-sidebar-behavior="sticky"
         className={styles.body}
       >
-        <div className="wrapper">
+        <div className={`wrapper ${styles.wrapper}`}>
           <div className="main">
             <div className="content">
               <div className="container-fluid p-0">
@@ -30,7 +30,9 @@ const FirstSem = ({ Course, errors }) => {
                   <>
                     <div className="row">
                       <div className="col-12 col-lg-12 col-xl-12">
-                        <h1 className={`h1 mb-3 ${styles.textCenter} `}>
+                        <h1
+                          className={`${styles.h1} mb-3 ${styles.textCenter} `}
+                        >
                           {errors}
                         </h1>
                       </div>
@@ -40,7 +42,9 @@ const FirstSem = ({ Course, errors }) => {
                   <>
                     <div className="row">
                       <div className="col-12 col-lg-12 col-xl-12">
-                        <h1 className={`h1 mb-3 ${styles.textCenter} `}>
+                        <h1
+                          className={`${styles.h1} mb-3 ${styles.textCenter} `}
+                        >
                           {Course.name} ({Course.code})
                         </h1>
                       </div>
@@ -52,20 +56,23 @@ const FirstSem = ({ Course, errors }) => {
                             <a href="https://vinnovateit.com/">
                               <Image
                                 height={80}
-                                width="auto"
+                                width={107}
                                 src="/img/VinnovateIT_small.png"
                                 alt="VinnovateIT"
                               />
                             </a>
-                            <Image
-                              height={25}
-                              src="/img/Vector.png"
-                              alt="Vector"
-                              className={styles.vectorImage}
-                            />
+                            <div className={styles.vectorImage}>
+                              <Image
+                                height={25}
+                                width={25}
+                                src="/img/Vector.png"
+                                alt="Vector"
+                              />
+                            </div>
                             <a href="https://www.siamvit.in/">
                               <Image
                                 height={50}
+                                width={160}
                                 src="/img/siam.png"
                                 alt="SiamVit"
                               />
@@ -76,13 +83,15 @@ const FirstSem = ({ Course, errors }) => {
                         <></>
                       )}
                       <div className="col-12 col-lg-12 col-xl-12">
-                        <h1 className={`h3 mb-3 ${styles.floatRight}`}>
+                        <h1
+                          className={`${styles.h3} mb-3 ${styles.floatRight}`}
+                        >
                           Credits : {Course.credits}
                         </h1>
                       </div>
                     </div>
                     {Course.description && Course.description.sanitizedHtml ? (
-                      <div className="note">
+                      <div className={styles.note}>
                         <h1 className={styles.noteH1}>NOTE:</h1>
                         <div
                           dangerouslySetInnerHTML={{
