@@ -56,17 +56,17 @@
     z-index: -999;
 }
 
-.my-container {
+.myContainer {
     position: relative;
     overflow: hidden;
 }
 
-.my-container span {
+.myContainer span {
     z-index: 2;
     position: relative;
 }
 
-.my-container img {
+.myContainer img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -101,4 +101,101 @@ height: auto; */
 
 .floatRight {
     float: right
+}
+
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* body {
+  line-height: 2;
+}  */
+
+.accordion {
+    font-size: 1.3rem;
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.accordionHeader,
+.accordionBody {
+    background: white;
+}
+
+.accordionHeader {
+    padding: 1.45em 1.45em;
+    background: #4C4E50;
+    /*      #3F51B5;*/
+    color: white;
+    cursor: pointer;
+    font-size: .7em;
+    letter-spacing: .1em;
+    transition: all .3s;
+    text-transform: uppercase;
+}
+
+.accordion__item {
+    border-bottom: 1px solid white;
+    /*        #3a4ba4;*/
+}
+
+.accordion__item .accordion__item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.accordionHeader:hover {
+    background: #272829;
+    position: relative;
+    z-index: 5;
+}
+
+.accordionBody {
+    background: #fcfcfc;
+    color: #353535;
+    display: none;
+}
+
+.accordionBody__contents {
+    padding: 1.5em 1.5em;
+    font-size: .70em;
+}
+
+.accordion__item.active:last-child .accordionHeader {
+    border-radius: none;
+}
+
+.accordion:first-child>.accordion__item>.accordionHeader {
+    border-bottom: 1px solid transparent;
+}
+
+.accordion__item>.accordionHeader:after {
+    font-family: "FontAwesome";
+    content: "\f107";
+    font-size: 1.2em;
+    float: right;
+    position: relative;
+    top: -2px;
+    transition: .3s all;
+    transform: rotate(0deg);
+}
+
+.accordion__item.active>.accordionHeader:after {
+    transform: rotate(-180deg);
+}
+
+.accordion__item.active .accordionHeader {
+    background: #272829;
+}
+
+.accordion__item .accordion__item .accordionHeader {
+    background: #f1f1f1;
+    color: #353535;
+}
+
+@media screen and (max-width: 1000px) {
+    .body {
+        padding: 1em;
+    }
+
+    .accordion {
+        width: 100%;
+    }
 }

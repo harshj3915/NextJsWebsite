@@ -7,6 +7,8 @@ import styles from "../../styles/Coursepages.module.css";
 import courses from "../../database/models/Courses";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
+import Script from "next/script";
 
 const FirstSem = ({ Course, errors }) => {
   const router = useRouter();
@@ -14,6 +16,8 @@ const FirstSem = ({ Course, errors }) => {
 
   return (
     <>
+      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></Script>
+      <Script type="text/javascript" src="/js/accordian.js"></Script>
       <Navbar />
       <div
         data-theme="default"
@@ -103,18 +107,24 @@ const FirstSem = ({ Course, errors }) => {
                       <></>
                     )}
 
-                    <div className="accordion js-accordion">
+                    <div className={`${styles.accordion} js-accordion`}>
                       {Course.modules.map((module) => {
                         return (
                           <div
                             className="accordion__item js-accordion-item"
                             key={module.num}
                           >
-                            <div className="accordion-header js-accordion-header">
+                            <div
+                              className={`${styles.accordionHeader} js-accordion-header`}
+                            >
                               MODULE {module.num}
                             </div>
-                            <div className="accordion-body js-accordion-body">
-                              <div className="accordion-body__contents my-container">
+                            <div
+                              className={`${styles.accordionBody} js-accordion-body`}
+                            >
+                              <div
+                                className={`${styles.accordionBody__contents} ${styles.myContainer}`}
+                              >
                                 <span
                                   dangerouslySetInnerHTML={{
                                     __html: module.sanitizedHtml,
@@ -137,13 +147,21 @@ const FirstSem = ({ Course, errors }) => {
                     {/* end of accordion */}
 
                     {Course.pdfs.length > 0 ? (
-                      <div className="accordion js-accordion">
-                        <div className="materials accordion__item js-accordion-item">
-                          <div className="accordion-header js-accordion-header">
+                      <div className={`${styles.accordion} js-accordion`}>
+                        <div
+                          className={`materials ${styles.accordion__item} js-accordion-item`}
+                        >
+                          <div
+                            className={`${styles.accordionHeader} js-accordion-header`}
+                          >
                             MATERIALS
                           </div>
-                          <div className="accordion-body js-accordion-body">
-                            <div className="accordion-body__contents">
+                          <div
+                            className={`${styles.accordionBody} js-accordion-body`}
+                          >
+                            <div
+                              className={`${styles.accordionBody__contents}`}
+                            >
                               <div className="container-fluid">
                                 <div className="row">
                                   {Course.pdfs.map((pdf) => {
