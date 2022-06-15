@@ -8,16 +8,17 @@ import courses from "../../database/models/Courses";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Head from "next/head";
-import Script from "next/script";
+import { useEffect } from "react";
+import jQueryAccordion from "../../utils/accordion";
 
 const FirstSem = ({ Course, errors }) => {
   const router = useRouter();
   const { courseName } = router.query;
 
+  useEffect(jQueryAccordion)
+
   return (
     <>
-      <Script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></Script>
-      <Script type="text/javascript" src="/js/accordian.js"></Script>
       <Navbar />
       <div
         data-theme="default"
