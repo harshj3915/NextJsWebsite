@@ -9,7 +9,7 @@ import courses from "../../database/models/Courses";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Head from "next/head";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import jQueryAccordion from "../../utils/accordion";
 
 const FirstSem = ({ Course, errors }) => {
@@ -17,6 +17,8 @@ const FirstSem = ({ Course, errors }) => {
   const { courseName } = router.query;
 
   useEffect(jQueryAccordion);
+
+  const [activeModule, setActiveModule] = useState(null);
 
   return (
     <>
@@ -123,11 +125,19 @@ const FirstSem = ({ Course, errors }) => {
                           <div
                             className={`${styles.accordion__item} js-accordion-item`}
                             key={module.num}
+                            onClick={() => {
+                              setActiveModule(module.num);
+                            }}
                           >
                             <div
                               className={`${styles.accordionHeader} js-accordion-header`}
                             >
-                              MODULE {module.num}
+                              MODULE {module.num}{" "}
+                              {activeModule === module.num ? (
+                                <i className="fas fa-angle-up"></i>
+                              ) : (
+                                <i className="fas fa-angle-down"></i>
+                              )}
                             </div>
                             <div
                               className={`${styles.accordionBody} js-accordion-body`}
