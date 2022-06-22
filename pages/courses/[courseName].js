@@ -121,7 +121,7 @@ const FirstSem = ({ Course, errors }) => {
                       {Course.modules.map((module) => {
                         return (
                           <div
-                            className="accordion__item js-accordion-item"
+                            className={`${styles.accordion__item} js-accordion-item`}
                             key={module.num}
                           >
                             <div
