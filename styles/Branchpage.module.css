@@ -1,40 +1,64 @@
 .coursecard {
-    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
-    transition: 0.08s;
-    cursor: pointer;
-    max-height: 200px;
-    min-height: 200px
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  transition: 0.08s;
+  cursor: pointer;
+  max-height: 200px;
+  min-height: 200px;
 }
 
-
 .coursecard:hover {
-    box-shadow: 0 0 0 0;
-    transition: 0.08s;
+  box-shadow: 0 0 0 0;
+  transition: 0.08s;
 }
 
 .h1 {
-    background: #6c757d;
-    background: -webkit-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
-    background: -moz-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
-    background: linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-    font-size: 220%;
+  background: #6c757d;
+  background: -webkit-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+  background: -moz-linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+  background: linear-gradient(to right, #6c757d 0%, #17a2b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 220%;
 }
 
 .doodle {
-    position: fixed;
-    z-index: -999;
+  position: fixed;
+  z-index: -999;
 }
 
 .textCenter {
-    text-align: center
+  text-align: center;
 }
 
 .btnBtn {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ieeeStyle {
+  margin-top: -18px;
+}
+
+.ieeea {
+  color: black;
+  font-weight: 500;
+}
+
+.ieeep {
+  font-size: 1rem;
+  color: black;
+  margin-right: 12px;
+}
+
+.ieeed {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 17px;
+  padding-top: 5px;
 }

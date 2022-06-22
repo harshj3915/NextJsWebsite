@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import mongoose from "mongoose";
 
 import styles from "../../styles/Branchpage.module.css";
+import Image from "next/image"
 
 import branch from "../../database/models/Branch";
 import courses from "../../database/models/Courses";
@@ -36,6 +37,34 @@ const FirstSem = ({ subjects, errors }) => {
                     <h1 className={`${styles.h1} mb-3 ${styles.textCenter}`}>
                       Branch - {branchName.toUpperCase()}
                     </h1>
+                    {branchName === "ece" ? (
+                      <div className="col-12 col-lg-12 col-xl-12">
+                        <div className={styles.ieeed}>
+                          <p className={styles.ieeep}>
+                            Contributed by{" "}
+                            <a
+                              className={styles.ieeea}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href="https://www.ieeecasvit.com/"
+                            >
+                              IEEE CAS
+                            </a>
+                          </p>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.ieeecasvit.com/"
+                          >
+                            <div styleName={styles.ieeeStyle}>
+                              <Image alt="" height={60} width={60} src="/img/cas.png" />
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                    ) : (
+                      <></>
+                    )}
                     <div className="row">
                       {subjects.map((subject) => {
                         return subject ? (
