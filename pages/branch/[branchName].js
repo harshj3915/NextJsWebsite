@@ -1,9 +1,11 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import mongoose from "mongoose";
+import Image from "next/image";
+
+import "css-doodle";
 
 import styles from "../../styles/Branchpage.module.css";
-import Image from "next/image"
 
 import branch from "../../database/models/Branch";
 import courses from "../../database/models/Courses";
@@ -22,6 +24,14 @@ const FirstSem = ({ subjects, errors }) => {
         data-sidebar-position="left"
         data-sidebar-behavior="sticky"
       >
+        <div className={styles.doodle}>
+          <css-doodle>
+            {`
+          :doodle { @grid: 30x30; @size: 100vmax; grid-gap: 1px; } background-color:
+          hsla(@r(360), 85%, @r(70%, 90%), @r(.2)); transform: scale(@rand(.1,.9));
+      `}
+          </css-doodle>
+        </div>
         <div className="wrapper">
           <div className="main">
             <main className="content">
@@ -57,7 +67,12 @@ const FirstSem = ({ subjects, errors }) => {
                             href="https://www.ieeecasvit.com/"
                           >
                             <div styleName={styles.ieeeStyle}>
-                              <Image alt="" height={60} width={60} src="/img/cas.png" />
+                              <Image
+                                alt=""
+                                height={60}
+                                width={60}
+                                src="/img/cas.png"
+                              />
                             </div>
                           </a>
                         </div>

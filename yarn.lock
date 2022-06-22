@@ -404,6 +404,11 @@ cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
+css-doodle@^0.28.1:
+  version "0.28.1"
+  resolved "https://registry.yarnpkg.com/css-doodle/-/css-doodle-0.28.1.tgz#e8491214f459ba893ddb497d47881617a8f249e6"
+  integrity sha512-FP+UTq97U9/hp/yseGFdc3RimD5ZKjdiunqL2p+0dzsbcp1vjh6vkwNOwZkJSGJ5aTxcIjNqo/xmn55fOb76LQ==
+
 damerau-levenshtein@^1.0.7:
   version "1.0.8"
   resolved "https://registry.npmjs.org/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz"
