@@ -2,6 +2,8 @@
     padding: 0;
     margin: 0;
     margin-top: 0%;
+    min-width: 0 !important;
+    width: 57px !important;
     vertical-align: top
 }
 
@@ -45,5 +47,5 @@
 }
 
 .searchNavbar {
-    width: 200px;
+    width: 190px;
 }

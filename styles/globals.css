@@ -4663,7 +4663,7 @@ input[type=submit].btn-block {
 
 .navbar {
     position: relative;
-    padding: .875rem 1.25rem
+    padding: .7rem 1.25rem
 }
 
 .navbar,
@@ -14089,7 +14089,6 @@ body[data-theme=light] .landing-brand svg path:first-child {
 .main {
     display: flex;
     width: 100%;
-    min-height: 100vh;
     min-width: 0;
     transition: margin-left .35s ease-in-out, left .35s ease-in-out, margin-right .35s ease-in-out, right .35s ease-in-out;
     flex-direction: column
