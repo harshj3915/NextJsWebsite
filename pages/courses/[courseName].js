@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import mongoose from "mongoose";
 
 import styles from "../../styles/Coursepages.module.css";
+import "css-doodle";
 
 import courses from "../../database/models/Courses";
 import { useRouter } from "next/router";
@@ -15,7 +16,7 @@ const FirstSem = ({ Course, errors }) => {
   const router = useRouter();
   const { courseName } = router.query;
 
-  useEffect(jQueryAccordion)
+  useEffect(jQueryAccordion);
 
   return (
     <>
@@ -27,6 +28,14 @@ const FirstSem = ({ Course, errors }) => {
         data-sidebar-behavior="sticky"
         className={styles.body}
       >
+        <div className={styles.doodle}>
+          <css-doodle>
+            {`
+      :doodle { @grid: 30x30; @size: 100vmax; grid-gap: 1px; } background-color:
+      hsla(@r(360), 85%, @r(70%, 90%), @r(.2)); transform: scale(@rand(.1,.9));
+  `}
+          </css-doodle>
+        </div>
         <div className={`wrapper ${styles.wrapper}`}>
           <div className="main">
             <div className="content">
@@ -132,10 +141,10 @@ const FirstSem = ({ Course, errors }) => {
                                   }}
                                 />
                                 <Image
-                                  src="/img/viitlogo.png"
+                                  src="/img/VinnovateIT_small.png"
                                   height={50}
                                   width={20}
-                                  alt=""
+                                  alt="VinnovateIT"
                                 />
                               </div>
                             </div>
