@@ -126,7 +126,11 @@ const FirstSem = ({ Course, errors }) => {
                             className={`${styles.accordion__item} js-accordion-item`}
                             key={module.num}
                             onClick={() => {
-                              setActiveModule(module.num);
+                              if (activeModule == module.num) {
+                                setActiveModule(null);
+                              } else {
+                                setActiveModule(module.num);
+                              }
                             }}
                           >
                             <div
