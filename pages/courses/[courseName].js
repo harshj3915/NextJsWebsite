@@ -138,9 +138,9 @@ const FirstSem = ({ Course, errors }) => {
                             >
                               MODULE {module.num}{" "}
                               {activeModule === module.num ? (
-                                <i className="fas fa-angle-up"></i>
+                                <i className={`fas fa-angle-up ${styles.fas}`}></i>
                               ) : (
-                                <i className="fas fa-angle-down"></i>
+                                <i className={`fas fa-angle-down ${styles.fas}`}></i>
                               )}
                             </div>
                             <div

@@ -147,6 +147,10 @@ height: auto; */
     z-index: 5;
 }
 
+.fas {
+    float: right;
+}
+
 .accordionBody {
     background: #fcfcfc;
     color: #353535;
