@@ -125,23 +125,11 @@ const FirstSem = ({ Course, errors }) => {
                           <div
                             className={`${styles.accordion__item} js-accordion-item`}
                             key={module.num}
-                            onClick={() => {
-                              if (activeModule == module.num) {
-                                setActiveModule(null);
-                              } else {
-                                setActiveModule(module.num);
-                              }
-                            }}
                           >
                             <div
                               className={`${styles.accordionHeader} js-accordion-header`}
                             >
                               MODULE {module.num}{" "}
-                              {activeModule === module.num ? (
-                                <i className={`fas fa-angle-up ${styles.fas}`}></i>
-                              ) : (
-                                <i className={`fas fa-angle-down ${styles.fas}`}></i>
-                              )}
                             </div>
                             <div
                               className={`${styles.accordionBody} js-accordion-body`}
