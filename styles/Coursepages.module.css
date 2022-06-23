@@ -158,6 +158,10 @@ height: auto; */
 .accordionBody__contents {
     padding: 1.5em 1.5em;
     font-size: .70em;
+    background-image: url("/img/viitlogo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 170px 170px;
 }
 
 .accordion__item.active:last-child .accordionHeader {
