@@ -3,7 +3,7 @@
 }
 
 .footlinksViit {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
 .footerSpan {
@@ -26,9 +26,16 @@
 .cpr {
     margin-top: 0.625rem;
     margin-left: auto;
-    margin-right: auto;
+    /* margin-right: auto; */
     padding-right: 5rem;
+    font-size: 1rem;
 }
+@media screen and (min-width: 450px) {
+    .cpr{
+        margin-right: auto;
+    }
+}
+
 
 .textMuted {
     color: #737d85 !important;

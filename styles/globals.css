@@ -471,7 +471,10 @@ mark {
 }
 
 .list-inline-item {
-    display: inline-block
+    display: inline-block;
+    font-size: 1.7rem;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .list-inline-item:not(:last-child) {
@@ -13872,8 +13875,8 @@ a.badge-soft-dark:focus {
 footer.footer {
     background: #fff;
     border-top: 1px solid #dee6ed;
-    padding: 1rem .75rem;
-    direction: ltr
+    padding: 0.3rem .75rem;
+    direction: ltr;
 }
 
 footer.footer ul {
