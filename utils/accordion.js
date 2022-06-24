@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 var accordion = (function () {
   var $accordion = $(".js-accordion");
   var $accordion_header = $accordion.find(".js-accordion-header");
