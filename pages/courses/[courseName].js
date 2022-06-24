@@ -130,7 +130,9 @@ const FirstSem = ({ Course, errors }) => {
                               className={`${styles.accordionHeader} js-accordion-header`}
                             >
                               MODULE {module.num}{" "}
-                              <i className="fas fa-angle-down"></i>
+                              <i
+                                className={`fas fa-angle-down ${styles.fas} `}
+                              ></i>
                             </div>
                             <div
                               className={`${styles.accordionBody} js-accordion-body`}
