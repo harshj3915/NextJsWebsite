@@ -61,8 +61,8 @@ const Footer = () => {
             </div>
             <div className={styles.cpr}>
               <p className="mb-0">
-                &copy; 2021 -
-                <Link href={`/`} className={styles.textMuted}>
+                &copy; 2022 -
+                <Link href={`https://vinnovateit.com/`} className={styles.textMuted}>
                   <a className={styles.textMuted}>
                     MADE With{" "}
                     <span className={styles.footerSpan}> &#10084;</span> By
