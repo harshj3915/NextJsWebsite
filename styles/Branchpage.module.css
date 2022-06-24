@@ -8,7 +8,13 @@
 }
 
 .coursecard:hover {
-  box-shadow: 0 0 0 0;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.5);
   transition: 0.08s;
 }
 
