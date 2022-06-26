@@ -50,7 +50,7 @@ export default function Document() {
         {/* <!-- FOR FACEBOOK END --> */}
         {/* <!-- FOR TWITTER --> */}
 
-        <meta name="twitter:card" content="website" />
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="StudyHub" />
         <meta
           name="twitter:title"
