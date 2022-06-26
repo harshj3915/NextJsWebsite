@@ -1,5 +1,5 @@
 .footer {
-    padding: 0
+    height: 7vh;
 }
 
 .footlinksViit {
@@ -30,8 +30,9 @@
     padding-right: 5rem;
     font-size: 1rem;
 }
+
 @media screen and (min-width: 450px) {
-    .cpr{
+    .cpr {
         margin-right: auto;
     }
 }

@@ -6,7 +6,9 @@ import styles from "../styles/components/Navbar.module.css";
 const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand navbar-light navbar-bg">
+      <nav
+        className={`navbar navbar-expand navbar-light navbar-bg ${styles.navbar}`}
+      >
         <Link href="/" className={styles.sidebarToggle}>
           <a>
             <Image

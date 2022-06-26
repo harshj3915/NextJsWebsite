@@ -49,3 +49,7 @@
 .searchNavbar {
     width: 190px;
 }
+
+.navbar {
+    height: 6vh;
+}

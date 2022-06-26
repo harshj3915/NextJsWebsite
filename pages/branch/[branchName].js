@@ -23,6 +23,7 @@ const FirstSem = ({ subjects, errors }) => {
         data-layout="fluid"
         data-sidebar-position="left"
         data-sidebar-behavior="sticky"
+        className={styles.branchPageMain}
       >
         <div className={styles.doodle}>
           <css-doodle>

@@ -108,6 +108,10 @@
     letter-spacing: 2px;
 }
 
+.wrapper {
+    height: 100%;
+}
+
 @media only screen and (max-width: 816px) {
     .header {
         min-height: 83vh;
@@ -372,7 +376,7 @@ p.landingp {
     }
 
     .cpr {
-        margin-left: auto; 
+        margin-left: auto;
         margin-right: auto;
         padding: 0;
         margin-top: 0;
@@ -404,4 +408,16 @@ p.landingp {
 .viit {
     font-weight: 100;
     font-family: 'Roboto Mono', monospace
+}
+
+.landingPage {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.landingPageMain {
+    height: 87vh;
+    margin: 0;
+    padding: 0;
 }
