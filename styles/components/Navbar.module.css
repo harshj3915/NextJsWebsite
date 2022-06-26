@@ -1,5 +1,5 @@
 .logo {
-    padding: 0;
+    padding-top: 1rem;
     margin: 0;
     margin-top: 0%;
     min-width: 0 !important;
@@ -51,5 +51,5 @@
 }
 
 .navbar {
-    height: 6vh;
+    height: 8vh;
 }

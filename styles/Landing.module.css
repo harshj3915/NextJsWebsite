@@ -417,7 +417,7 @@ p.landingp {
 }
 
 .landingPageMain {
-    min-height: 86vh;
+    height: 83vh;
     margin: 0;
     padding: 0;
     background-color: #fff;
