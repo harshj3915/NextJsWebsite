@@ -2,8 +2,12 @@
     height: 8vh;
 }
 
+.footerIcons {
+    padding-bottom: 1rem;
+}
+
 .footlinksViit {
-    /* margin-bottom: 1rem; */
+    margin-bottom: 1rem;
 }
 
 .footerSpan {

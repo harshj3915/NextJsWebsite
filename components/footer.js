@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="container-fluid">
           <div className="row text-muted">
             <div className={styles.lnks}>
-              <ul className="list-inline">
+              <ul className={`list-inline ${styles.footerIcons}`}>
                 <li className="list-inline-item">
                   <a
                     target="_blank"
@@ -62,7 +62,10 @@ const Footer = () => {
             <div className={styles.cpr}>
               <p className="mb-0">
                 &copy; 2022 -
-                <Link href={`https://vinnovateit.com/`} className={styles.textMuted}>
+                <Link
+                  href={`https://vinnovateit.com/`}
+                  className={styles.textMuted}
+                >
                   <a className={styles.textMuted}>
                     MADE With{" "}
                     <span className={styles.footerSpan}> &#10084;</span> By
