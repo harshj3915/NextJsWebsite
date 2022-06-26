@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 import styles from "../styles/components/Navbar.module.css";
 
 const Navbar = () => {
+  const [searchText, setSearchText] = useState("");
   return (
     <>
       <nav
@@ -25,8 +27,9 @@ const Navbar = () => {
             <div className="search-box">
               <form
                 className={styles.searchForm}
-                action="/courses/search"
-                method="POST"
+                onSubmit={(e) =>
+                  (window.location.href = `/search/${searchText}`)
+                }
               >
                 <div
                   className={`input-group autocomplete ${styles.searchNavbar}`}
@@ -38,10 +41,17 @@ const Navbar = () => {
                     aria-label="Search"
                     name="query"
                     id="autoCourse"
+                    value={searchText}
+                    onChange={(e) => setSearchText(e.target.value)}
                   />
                   <div className={styles.searchButton}>
-                    <button>
-                      <i className="fas fa-search"></i>
+                    <button
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = `/search/${searchText}`;
+                      }}
+                    >
+                      <i value="" className="fas fa-search"></i>
                     </button>
                   </div>
                 </div>
