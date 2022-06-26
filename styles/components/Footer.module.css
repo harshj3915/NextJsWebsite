@@ -1,5 +1,5 @@
 .footer {
-    height: 7vh;
+    height: 9vh;
 }
 
 
@@ -34,6 +34,13 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .lnks {
+        display: none;
+    }
+
+
+}
 
 .textMuted {
     color: #737d85 !important;
