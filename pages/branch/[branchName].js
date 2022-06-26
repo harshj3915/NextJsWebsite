@@ -1,6 +1,7 @@
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
 import mongoose from "mongoose";
+import Head from "next/head";
 import Image from "next/image";
 
 import "css-doodle";
@@ -17,6 +18,9 @@ const FirstSem = ({ subjects, errors }) => {
 
   return (
     <>
+      <Head>
+        <title>Branch | {branchName.toUpperCase()}</title>
+      </Head>
       <Navbar />
       <div
         data-theme="default"

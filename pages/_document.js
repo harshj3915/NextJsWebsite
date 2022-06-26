@@ -16,6 +16,7 @@ export default function Document() {
             `,
           }}
         />
+        <link rel="icon" type="image/png" href="/img/sglogofav.png"></link>
 
         <Script
           src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"

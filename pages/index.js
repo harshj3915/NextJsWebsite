@@ -13,6 +13,9 @@ import courses from "../database/models/Courses";
 export default function Home(props) {
   return (
     <>
+      <Head>
+        <title>StudyHub by VinnovateIT</title>
+      </Head>
       <div className={styles.landingPage}>
         <Navbar />
         <div

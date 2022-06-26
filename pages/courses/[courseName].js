@@ -14,14 +14,14 @@ import jQueryAccordion from "../../utils/accordion";
 
 const FirstSem = ({ Course, errors }) => {
   const router = useRouter();
-  const { courseName } = router.query;
 
   useEffect(jQueryAccordion);
 
-  const [activeModule, setActiveModule] = useState(null);
-
   return (
     <>
+      <Head>
+        <title>StudyHub | {Course.code}</title>
+      </Head>
       <Navbar />
       <div
         data-theme="default"
