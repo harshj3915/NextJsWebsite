@@ -277,7 +277,6 @@ export async function getServerSideProps(context) {
     if (mongoose.connections[0].readyState) {
       //Execute fetch here
     } else {
-      console.log(process.env.MONGO_URI);
       await mongoose
         .connect(process.env.MONGO_URI, {
           useUnifiedTopology: true,
