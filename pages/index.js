@@ -51,7 +51,7 @@ export default function Home(props) {
                     {
                       "A 'CAT'ing chai and StudyHub from VinnovateIT is all you need for your exams!!"
                     }
-                    <span className={styles.quotes - 2}>{' "'} </span>
+                    <span>{' "'} </span>
                   </p>
                   <h4 className={styles.desc}>
                     No need to worry about your exams anymore, we present to you
@@ -72,8 +72,8 @@ export default function Home(props) {
                 <div className={styles.imgBox}>
                   <Image
                     src="/images/studyguide.svg"
-                    height="400px"
-                    width="550px"
+                    height={400}
+                    width={550}
                     alt=""
                   />
                 </div>

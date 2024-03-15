@@ -3,6 +3,7 @@ import Footer from "../../components/footer";
 import mongoose from "mongoose";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import "css-doodle";
 
@@ -19,7 +20,7 @@ const FirstSem = ({ subjects, errors }) => {
   return (
     <>
       <Head>
-        <title>Branch | {branchName.toUpperCase()}</title>
+        <title>Branch</title>
       </Head>
       <Navbar />
       <div

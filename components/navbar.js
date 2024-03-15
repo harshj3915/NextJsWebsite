@@ -12,15 +12,16 @@ const Navbar = () => {
         className={`navbar navbar-expand navbar-light navbar-bg ${styles.navbar}`}
       >
         <Link href="/" className={styles.sidebarToggle}>
-          <a>
-            <Image
-              src="/img/sglogo.png"
-              height={42}
-              width={70}
-              className={styles.logo}
-              alt="StudyHub"
-            />
-          </a>
+          <div><Image
+            src="/img/sglogo.png"
+            height={42}
+            width={70}
+            className={styles.logo}
+            alt="StudyHub"
+          /></div>
+
+          
+
         </Link>
         <div className="navbar-collapse collapse">
           <ul className="navbar-nav navbar-align">

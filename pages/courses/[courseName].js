@@ -20,7 +20,7 @@ const FirstSem = ({ Course, errors }) => {
   return (
     <>
       <Head>
-        <title>StudyHub | {Course.code}</title>
+        <title>StudyHub</title>
       </Head>
       <Navbar />
       <div
@@ -69,14 +69,7 @@ const FirstSem = ({ Course, errors }) => {
                       Course.code == "BMAT102L" ? (
                         <div className="col-12 col-lg-12 col-xl-12">
                           <div className={styles.logoDiv}>
-                            <a href="https://vinnovateit.com/">
-                              <Image
-                                height={80}
-                                width={107}
-                                src="/img/VinnovateIT_small.png"
-                                alt="VinnovateIT"
-                              />
-                            </a>
+
                             <div className={styles.vectorImage}>
                               <Image
                                 height={25}
@@ -85,14 +78,7 @@ const FirstSem = ({ Course, errors }) => {
                                 alt="Vector"
                               />
                             </div>
-                            <a href="https://www.siamvit.in/">
-                              <Image
-                                height={50}
-                                width={160}
-                                src="/img/siam.png"
-                                alt="SiamVit"
-                              />
-                            </a>
+
                           </div>
                         </div>
                       ) : (

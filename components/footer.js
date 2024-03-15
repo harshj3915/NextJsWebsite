@@ -66,11 +66,11 @@ const Footer = () => {
                   href={`https://vinnovateit.com/`}
                   className={styles.textMuted}
                 >
-                  <a className={styles.textMuted}>
+                  <div className={styles.textMuted}>
                     MADE With{" "}
                     <span className={styles.footerSpan}> &#10084;</span> By
                     VinnovateIT
-                  </a>
+                  </div>
                 </Link>
               </p>
             </div>
